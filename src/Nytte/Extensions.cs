@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
+using Nytte.Wrappers;
 
 namespace Nytte
 {
@@ -7,6 +8,7 @@ namespace Nytte
     {
         public static INytteBuilder AddNytte(this IServiceCollection services)
         {
+            services.AddSingleton<IJson, Json>();
             return new NytteBuilder(services);
         }
     }
