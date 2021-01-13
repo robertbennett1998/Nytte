@@ -30,7 +30,7 @@ namespace Nytte.Web.Sample
                 app.UseDeveloperExceptionPage();
             }
 
-            var httpClient = app.ApplicationServices.GetRequiredService<IHttpClient>();
+            
 
             app.UseRouting();
 
@@ -38,6 +38,9 @@ namespace Nytte.Web.Sample
             {
                 endpoints.MapGet("/", async context =>
                 {
+                    var scope = app.ApplicationServices.CreateScope();
+                    var httpClient = scope.ServiceProvider.GetRequiredService<IHttpClient>();
+                    
                     var url = "https://official-joke-api.appspot.com/random_joke";
                     var result = await httpClient.GetAsync<AJoke>(url);
                     if (result.RefusedConnection)
@@ -48,12 +51,14 @@ namespace Nytte.Web.Sample
                     else if (result.Data is { })
                     {
                         var joke = result.Data;
-                        await context.Response.WriteAsync($"{joke.Setup} ... \n {joke.Punchline}");
+                        await context.Response.WriteAsync($"{joke.Setup} ... \n{joke.Punchline}");
                     }
                     else
                     {
                         await context.Response.WriteAsync($"Uh oh request failed with status code: {result.Message.StatusCode}");   
                     }
+                    
+                    scope.Dispose();
                 });
             });
         }

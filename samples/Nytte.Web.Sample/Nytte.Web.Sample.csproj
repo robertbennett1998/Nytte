@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Nytte.Http" Version="0.4.7-alpha" />
+      <PackageReference Include="Nytte.Http" Version="0.4.11-alpha" />
     </ItemGroup>
 
 </Project>
