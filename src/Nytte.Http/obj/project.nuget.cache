@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nHCPnG9dkEtOt1x0rNnZJLqhJGC0q5FuSyoeXzlSwmzQuy3VySfiBpPdLn/Ar77EzVzeuORAN/QYCpjhdBFo2w==",
+  "success": true,
+  "projectFilePath": "/Users/williammumby/repos/Nytte/src/Nytte.Http/Nytte.Http.csproj",
+  "expectedPackageFiles": [
+    "/Users/williammumby/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/5.0.0/microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
