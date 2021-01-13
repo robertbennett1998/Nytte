@@ -1,4 +1,4 @@
-if [$TRAVIS_PULL_REQUEST != "false"]
+if [ $TRAVIS_PULL_REQUEST = false ]
 then
     echo "Starting package publish"
 
@@ -9,6 +9,10 @@ then
         sh ./$dir/scripts/pack-pub.sh & wait
         echo ""
     done
-    
+
     echo "Finished publishing package"
+fi
+if [ $TRAVIS_PULL_REQUEST != false ]
+then
+    echo "Not publishing packages"
 fi
