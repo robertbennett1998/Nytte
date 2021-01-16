@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Moq.AutoMock" Version="2.3.0" />
-    <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Shouldly" Version="4.0.3" />
@@ -16,6 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Nytte.Http\Nytte.Http.csproj" />
+    <ProjectReference Include="..\..\src\Nytte.Testing\Nytte.Testing.csproj" />
+    <ProjectReference Include="..\..\src\Nytte\Nytte.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,14 +6,14 @@ using Moq;
 using Moq.AutoMock;
 using NUnit.Framework;
 using Nytte.Http.Wrappers;
+using Nytte.Testing;
 using Nytte.Wrappers;
 using Shouldly;
 
 namespace Nytte.Http.Tests
 {
-    public class EnhancedHttpClientTests
+    public class EnhancedHttpClientTests : ServiceUnderTest<IHttpClient, EnhancedHttpClient>
     {
-        private AutoMocker _mocker;
         private Mock<IHttpClientWrapper> _client;
         private HttpResponseMessage _response;
         private string _url;
@@ -27,17 +27,16 @@ namespace Nytte.Http.Tests
         record ReturnType();
 
         [SetUp]
-        public void Setup()
+        public override void Setup()
         {
-            _mocker = new AutoMocker();
-            _client = _mocker.GetMock<IHttpClientWrapper>();
+            _client = Mocker.GetMock<IHttpClientWrapper>();
             _response = new HttpResponseMessage();
             _url = "url";
             _json = "some json";
             _content = new Mock<HttpContent>();
-            _mocker.GetMock<IHttpContentFactory>().Setup(o => o.CreateJsonContent(_json)).Returns(_content.Object);
-            _mocker.GetMock<IJson>().Setup(o => o.SerializeAsync(It.IsAny<object>())).ReturnsAsync(_json);
-            _jsonWrapper = _mocker.GetMock<IJson>();
+            Mocker.GetMock<IHttpContentFactory>().Setup(o => o.CreateJsonContent(_json)).Returns(_content.Object);
+            Mocker.GetMock<IJson>().Setup(o => o.SerializeAsync(It.IsAny<object>())).ReturnsAsync(_json);
+            _jsonWrapper = Mocker.GetMock<IJson>();
             _returnType = new ReturnType();
             _jsonWrapper.Setup(o => o.DeserializeAsync<ReturnType>(_json)).ReturnsAsync(_returnType);
         }
@@ -463,8 +462,5 @@ namespace Nytte.Http.Tests
         private void SetSuccessStatusCode() => _response.StatusCode = HttpStatusCode.OK;
 
         private void SetFailStatusCode() => _response.StatusCode = HttpStatusCode.BadRequest;
-
-        private IHttpClient CreateSut() => _mocker.CreateInstance<EnhancedHttpClient>();
-
     }
 }

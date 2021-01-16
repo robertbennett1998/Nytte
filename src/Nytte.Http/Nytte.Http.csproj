@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>Latest</LangVersion>
+    <Title>Nytte.Http</Title>
+    <PackageId>Nytte.Http</PackageId>
+    <PackageTags>Nytte</PackageTags>
+    <RepositoryUrl>https://github.com/mumby0168/Nytte</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
