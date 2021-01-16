@@ -2,18 +2,18 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using Moq.AutoMock;
 using NUnit.Framework;
+using Nytte.Testing;
 using Shouldly;
 
 namespace Nytte.Http.Tests
 {
-    public class HttpContentFactoryTests
+    public class HttpContentFactoryTests : ServiceUnderTest<IHttpContentFactory, HttpContentFactory>
     {
-        private AutoMocker _mocker;
-
-        [SetUp]
-        public void Setup()
+        private AutoMocker Mocker;
+        
+        public override void Setup()
         {
-            _mocker = new AutoMocker();
+            
         }
 
         [Test]
@@ -33,6 +33,6 @@ namespace Nytte.Http.Tests
             content.Headers.ContentType.CharSet.ShouldBe(Encoding.UTF8.WebName);
         }
 
-        private IHttpContentFactory CreateSut() => _mocker.CreateInstance<HttpContentFactory>();
+        
     }
 }

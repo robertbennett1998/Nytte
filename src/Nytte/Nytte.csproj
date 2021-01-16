@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <LangVersion>Latest</LangVersion>
-    <AssemblyName>Nytte</AssemblyName>
     <Title>Nytte</Title>
     <PackageId>Nytte</PackageId>
     <PackageTags>Nytte</PackageTags>

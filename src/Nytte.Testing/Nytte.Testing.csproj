@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>Latest</LangVersion>
+        <Title>Nytte.Testing</Title>
+        <PackageId>Nytte.Testing</PackageId>
+        <PackageTags>Nytte</PackageTags>
+        <RepositoryUrl>https://github.com/mumby0168/Nytte</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Moq.AutoMock" Version="2.3.0" />
+      <PackageReference Include="NUnit" Version="3.13.0" />
+    </ItemGroup>
+
+</Project>
