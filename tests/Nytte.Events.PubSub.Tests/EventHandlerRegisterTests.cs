@@ -61,7 +61,7 @@ namespace Nytte.PubSub.Tests
         }
 
         [Test]
-        public void DeregisterHandler_ValidNoArgsFunctionHandler_RegistersListener()
+        public void DeregisterHandler_ValidNoArgsFunctionHandler_DeregistersListener()
         {
             // Arrange
             var sut = CreateSut();
@@ -76,7 +76,7 @@ namespace Nytte.PubSub.Tests
         }
         
         [Test]
-        public void DeregisterHandler_ValidArgsFunctionHandler_RegistersListener()
+        public void DeregisterHandler_ValidArgsFunctionHandler_DeregistersListener()
         {
             // Arrange
             var sut = CreateSut();
