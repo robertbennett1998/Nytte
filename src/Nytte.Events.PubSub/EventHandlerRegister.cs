@@ -17,7 +17,9 @@ namespace Nytte.PubSub
 
         public IReadOnlyList<Action<T>> GetEventHandlers<T>() where T : IPubSubEvent
         {
-            return _eventHandlers.ContainsKey(typeof(T)) ? _eventHandlers[typeof(T)].Cast<Action<T>>().ToImmutableList() : new List<Action<T>>();
+            return _eventHandlers.ContainsKey(typeof(T)) 
+                ? _eventHandlers[typeof(T)].Cast<Action<T>>().ToImmutableList() 
+                : new List<Action<T>>();
         }
         
         public void RegisterEventHandler<T>(Action<T> eventHandler) where T : IPubSubEvent

@@ -17,7 +17,9 @@ namespace Nytte.PubSub
         
         public IReadOnlyList<Func<T, Task>> GetAsyncEventHandlers<T>() where T : IAsyncPubSubEvent
         {
-            return _eventHandlers.ContainsKey(typeof(T)) ? _eventHandlers[typeof(T)].Cast<Func<T, Task>>().ToImmutableList() : new List<Func<T, Task>>();
+            return _eventHandlers.ContainsKey(typeof(T)) 
+                ? _eventHandlers[typeof(T)].Cast<Func<T, Task>>().ToImmutableList() 
+                : new List<Func<T, Task>>();
         }
 
         public void RegisterAsyncEventHandler<T>(Func<T, Task> eventHandler) where T : IAsyncPubSubEvent
