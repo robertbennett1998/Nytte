@@ -9,8 +9,6 @@ namespace Nytte.Http.Tests
 {
     public class HttpContentFactoryTests : ServiceUnderTest<IHttpContentFactory, HttpContentFactory>
     {
-        private AutoMocker Mocker;
-        
         public override void Setup()
         {
             

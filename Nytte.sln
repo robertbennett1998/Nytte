@@ -1,31 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A57D2D4D-EDD8-4DCE-A209-FE36E46545E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nytte", "src\Nytte\Nytte.csproj", "{49B3E32B-B36A-4654-BF96-81D4591B9BED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nytte", "src\Nytte\Nytte.csproj", "{49B3E32B-B36A-4654-BF96-81D4591B9BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nytte.Http", "src\Nytte.Http\Nytte.Http.csproj", "{115EB738-538B-4B8C-AA80-7D1D1E5D7798}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nytte.Http", "src\Nytte.Http\Nytte.Http.csproj", "{115EB738-538B-4B8C-AA80-7D1D1E5D7798}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9BA76F1C-463E-41F0-9EE1-B25366A0EC9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nytte.Http.Tests", "tests\Nytte.Http.Tests\Nytte.Http.Tests.csproj", "{DD785574-9E8E-4C63-8BBD-32BE22AABA63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nytte.Http.Tests", "tests\Nytte.Http.Tests\Nytte.Http.Tests.csproj", "{DD785574-9E8E-4C63-8BBD-32BE22AABA63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{7F40B61C-F3D1-45D3-A585-16A514F9B9C0}"
-ProjectSection(SolutionItems) = preProject
-	scripts\pack.sh = scripts\pack.sh
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		scripts\pack.sh = scripts\pack.sh
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{E019BD54-265A-4F9A-9D3D-E25023C4C75A}"
-ProjectSection(SolutionItems) = preProject
-	README.md = README.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{9FF5D224-1235-431F-9B34-E6EE98C18A74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nytte.Web.Sample", "samples\Nytte.Web.Sample\Nytte.Web.Sample.csproj", "{8C0822BC-92ED-4EFA-99A0-D2E34920E3D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nytte.Web.Sample", "samples\Nytte.Web.Sample\Nytte.Web.Sample.csproj", "{8C0822BC-92ED-4EFA-99A0-D2E34920E3D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nytte.Events.PubSub", "src\Nytte.Events.PubSub\Nytte.Events.PubSub.csproj", "{72E01466-00D9-47C7-9DEE-5390E13297E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nytte.Events.PubSub.Tests", "tests\Nytte.Events.PubSub.Tests\Nytte.Events.PubSub.Tests.csproj", "{77328585-991B-47E1-A501-97CB342022C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nytte.Testing", "src\Nytte.Testing\Nytte.Testing.csproj", "{FAADD189-7179-4C0D-8D49-EFC6F356B6A7}"
 EndProject
@@ -37,9 +41,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{49B3E32B-B36A-4654-BF96-81D4591B9BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -102,6 +103,33 @@ Global
 		{FAADD189-7179-4C0D-8D49-EFC6F356B6A7}.Release|x64.Build.0 = Release|Any CPU
 		{FAADD189-7179-4C0D-8D49-EFC6F356B6A7}.Release|x86.ActiveCfg = Release|Any CPU
 		{FAADD189-7179-4C0D-8D49-EFC6F356B6A7}.Release|x86.Build.0 = Release|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Debug|x64.Build.0 = Debug|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Debug|x86.Build.0 = Debug|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Release|x64.Build.0 = Release|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{72E01466-00D9-47C7-9DEE-5390E13297E3}.Release|x86.Build.0 = Release|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Debug|x64.Build.0 = Debug|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Debug|x86.Build.0 = Debug|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Release|x64.Build.0 = Release|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Release|x86.ActiveCfg = Release|Any CPU
+		{77328585-991B-47E1-A501-97CB342022C2}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{49B3E32B-B36A-4654-BF96-81D4591B9BED} = {A57D2D4D-EDD8-4DCE-A209-FE36E46545E9}
@@ -109,5 +137,10 @@ Global
 		{DD785574-9E8E-4C63-8BBD-32BE22AABA63} = {9BA76F1C-463E-41F0-9EE1-B25366A0EC9E}
 		{8C0822BC-92ED-4EFA-99A0-D2E34920E3D6} = {9FF5D224-1235-431F-9B34-E6EE98C18A74}
 		{FAADD189-7179-4C0D-8D49-EFC6F356B6A7} = {A57D2D4D-EDD8-4DCE-A209-FE36E46545E9}
+		{72E01466-00D9-47C7-9DEE-5390E13297E3} = {A57D2D4D-EDD8-4DCE-A209-FE36E46545E9}
+		{77328585-991B-47E1-A501-97CB342022C2} = {9BA76F1C-463E-41F0-9EE1-B25366A0EC9E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B2EE5C9-51C2-444E-9384-21F75A8C1146}
 	EndGlobalSection
 EndGlobal
